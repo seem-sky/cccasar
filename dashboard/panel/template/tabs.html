@@ -1,0 +1,55 @@
+<div class="tabs">
+
+    <ul>
+        <li
+            :active="tab === 0"
+            @click="changeTab(0)"
+        >
+            <span>
+                {{t('DASHBOARD.recent_project')}}
+            </span>
+        </li>
+        <li
+            :active="tab === 1"
+            @click="changeTab(1)"
+        >
+            <span>
+                {{t('DASHBOARD.new_project')}}
+            </span>
+        </li>
+        <li
+            :active="tab === 2"
+            @click="changeTab(2)"
+        >
+            <span>
+                {{t('DASHBOARD.open_other')}}...
+            </span>
+        </li>
+        <li
+            :active="tab === 3"
+            @click="changeTab(3)"
+        >
+            <span>
+                {{t('SHARED.help')}}
+                <i class="dot"
+                    v-if="remind"
+                ></i>
+            </span>
+        </li>
+    </ul>
+
+    <div class="search"
+        v-if="tab === 0 || tab === 1"
+    >
+        <div class="input">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input placeholder="Search"
+                :value="filter"
+                @keyup="changeFilter"
+            ></input>
+        </div>
+        <div class="img">
+            <img class="avatar" src="./static/img/avatar.jpg">
+        </div>		
+    </div>
+</div>

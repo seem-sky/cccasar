@@ -1,0 +1,1 @@
+"use strict";const e=require("fire-fs"),t=require("electron").shell;exports.template=e.readFileSync(Editor.url("packages://project-settings/panel/template/service.html"),"utf-8"),exports.props=["analytics"],exports.methods={T:Editor.T,_onJumpAnalytics(){t.openExternal("https://analytics.cocos.com")}},exports.created=function(){};

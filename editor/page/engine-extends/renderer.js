@@ -1,0 +1,1 @@
+let e=cc.renderer.renderEngine.gfx,r=cc.renderer.renderEngine.renderer.Pass;r.prototype._doSetBlend=r.prototype.setBlend,r.prototype.setBlend=function(r,n,t,d,_,o,D){void 0===r&&(r=e.BLEND_FUNC_ADD),r===e.BLEND_FUNC_ADD&&o===e.BLEND_ONE_MINUS_SRC_ALPHA&&(o=e.BLEND_DST_ALPHA),this._doSetBlend(r,n,t,d,_,o,D)};

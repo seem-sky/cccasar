@@ -1,0 +1,63 @@
+<div class="service">
+
+    <div class="props">
+
+        <ui-prop
+            name="{{T('PROJECT_SETTINGS.service.analytics')}}"
+            tooltip="{{T('PROJECT_SETTINGS.service.analytics_tooltip')}}"
+        >
+            <ui-checkbox
+                v-value="analytics.enable"
+            ></ui-checkbox>
+        </ui-prop>
+
+        <template
+            v-if="analytics.enable"
+        >
+
+            <ui-prop
+                name="AppID"
+            >
+                <ui-input class="flex-2" style="margin-right:8px"
+                    v-value="analytics.appID"
+                ></ui-input>
+            </ui-prop>
+
+            <ui-prop
+                name="AppSecret"
+            >
+                <ui-input class="flex-2" style="margin-right:8px"
+                    v-value="analytics.appSecret"
+                ></ui-input>
+            </ui-prop>
+
+
+            <div class="optional">
+                <p>{{T('PROJECT_SETTINGS.service.analytics_channel_info')}}</p>
+                <ui-prop
+                    name="channel"
+                >
+                    <ui-input class="flex-2"
+                        v-value="analytics.channel"
+                    ></ui-input>
+                </ui-prop>
+
+                <ui-prop
+                    name="version"
+                >
+                    <ui-input class="flex-2"
+                        v-value="analytics.version"
+                    ></ui-input>
+                </ui-prop>
+                <span>
+                    <i class="fa fa-info-circle"></i>
+                    {{T('PROJECT_SETTINGS.service.analytics_anysdk_info')}}
+                </span>
+            </div>
+        </template>
+    </div>
+
+    <a class="jump-analytics"
+        v-on:click="_onJumpAnalytics"
+    >{{T('PROJECT_SETTINGS.service.jump_web_site')}}</a>
+</div>

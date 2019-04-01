@@ -1,0 +1,1 @@
+"use strict";const e=require("fs");let t=require("path").join(Editor.Project.path,"local","layout.windows.json");if(e.existsSync(t)){let i;try{i=JSON.parse(e.readFileSync(t,"utf8"))}catch(e){i=null}finally{i&&i.version||(Editor.warn("Invalid layout profile, remove old profile and init a new one at: "+t),e.removeSync(t))}}
