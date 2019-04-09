@@ -1,1 +1,1 @@
-Editor.assets=Editor.assets||{},Editor.assets["raw-asset"]=cc.RawAsset,Editor.assets.asset=cc.Asset;
+Editor.assets = Editor.assets || {}, Editor.assets["raw-asset"] = cc.RawAsset, Editor.assets.asset = cc.Asset;
